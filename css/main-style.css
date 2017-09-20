@@ -276,7 +276,7 @@ button:hover{
 */
 .cinema{
     grid-area: cinema;   
-	background: url(comigo/other/homepage-featured-new-1920x745.jpg) no-repeat; 
+	background: url(../comigo/other/homepage-featured-new-1920x745.jpg) no-repeat; 
 	background-position: 100%;
 	background-size: cover;
 	text-align: center;
@@ -423,8 +423,8 @@ button:hover{
 .box1{	
     grid-area: box1;     
 	background-image: 
-	            url(comigo/other/ic_EI_cloud_2_home_page.png),
-	            url(comigo/other/home-tv-service-bg1.png);	            	
+	            url(../comigo/other/ic_EI_cloud_2_home_page.png),
+	            url(../comigo/other/home-tv-service-bg1.png);	            	
 	background-position:  35% 15%, 100% 100%;
     background-size: 50% auto,cover;
 	background-repeat: no-repeat, no-repeat;		
@@ -432,8 +432,8 @@ button:hover{
 .box2{   
     grid-area: box2; 	
 	background-image: 
-	             url(comigo/other/ic-stb-screens.png),
-	             url(comigo/other/home-tv-service-bg2.png);	
+	             url(../comigo/other/ic-stb-screens.png),
+	             url(../comigo/other/home-tv-service-bg2.png);	
 	background-position: 13% 15%, 100% 100%;
 	background-size: 40% auto,cover;
 	background-repeat: no-repeat, no-repeat;	
@@ -494,7 +494,7 @@ button:hover{
 }
 .whoimg {	
     grid-area: who-img;  				
-	background: white url(comigo/other/screen_whos_on.jpg)  no-repeat;	
+	background: white url(../comigo/other/screen_whos_on.jpg)  no-repeat;	
 	background-size: 90%;		
 	background-position-x: 180%;
 	background-position-y: 50%;	  
@@ -679,19 +679,19 @@ grid-template-areas:
    padding-bottom: 2rem;
 }
 .one{		
-    background: url(comigo/blog/one.png)  no-repeat;		  					 
+    background: url(../comigo/blog/one.png)  no-repeat;		  					 
 }
 .two{	
-	background: url(comigo/blog/two.jpeg)  no-repeat;	
+	background: url(../comigo/blog/two.jpeg)  no-repeat;	
 }
 .three{	
-	background: url(comigo/blog/three.jpg)  no-repeat;	
+	background: url(../comigo/blog/three.jpg)  no-repeat;	
 }	
 .four{	
-	background: url(comigo/blog/four.jpeg)  no-repeat;	
+	background: url(../comigo/blog/four.jpeg)  no-repeat;	
 }
 .five{	
-	background: url(comigo/blog/five.jpeg)  no-repeat;
+	background: url(../comigo/blog/five.jpeg)  no-repeat;
 }
 .one,.two,.three,.four,.five{
     flex: 1 1 auto;
