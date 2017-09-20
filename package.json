@@ -1,0 +1,33 @@
+{
+  "name": "comigo-grid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "postcss css/**/*.css -d dist/",
+    "watch": "npm-watch css"
+  },
+  "watch": {
+    "css": {
+      "patterns": ["css/**/*"],
+      "extensions": "css",
+      "legacyWatch": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NataliaGon/comigo-grid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NataliaGon/comigo-grid/issues"
+  },
+  "homepage": "https://github.com/NataliaGon/comigo-grid#readme",
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "npm-watch": "^0.2.0",
+    "postcss-cli": "^4.1.1"
+  }
+}
