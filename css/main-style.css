@@ -83,11 +83,11 @@ body {
 * HEADER
 ******************
 */
-#navtop .selected {
+.navtop .selected {
   color: rgb(241, 72, 72);
   font-weight: 700;
 }
-#navtop a {
+.navtop a {
   text-decoration: none;
   color: #808080;
   width: 100%;
@@ -108,22 +108,22 @@ label {
     background: white;
     z-index: 4;
   }
-  #logo-black {
+  .logo-black {
     margin-left: 15px;
   }
-  #navtop {
+  .navtop {
     flex: auto;
     display: flex;
     justify-content: flex-end;
     height: 100%;
   }
-  #navtop li {
+  .navtop li {
     display: inline-flex;
     height: 100%;
     align-items: center;
     cursor: pointer;
   }
-  #navtop a {
+  .navtop a {
     display: flex;
     align-items: center;
   }
@@ -136,11 +136,11 @@ label {
   .first-line-nav > a:hover {
     color: rgb(241, 72, 72);
   }
-  #navtop > ul {
+  .navtop > ul {
     display: flex;
   }
-  #navtop > ul > li > ul,
-  #navtop ul ul ul {
+  .navtop > ul > li > ul,
+  .navtop ul ul ul {
     position: absolute;
     display: flex;
     left: 0px;
@@ -153,22 +153,22 @@ label {
     background: white;
     opacity: 0.99;
   }
-  #navtop > ul > li > ul {
+  .navtop > ul > li > ul {
     top: 66px;
   }
-  #navtop ul ul ul {
+  .navtop ul ul ul {
     top: 132px;
   }
-  #navtop li:hover > ul {
+  .navtop li:hover > ul {
     transform: scale(1, 1);
   }
   nav ul ul li {
     flex-basis: 33.33%;
   }
-  #navtop ul ul ul li {
+  .navtop ul ul ul li {
     flex-basis: 50%;
   }
-  #navtop ul li ul li a:hover {
+  .navtop ul li ul li a:hover {
     background: rgb(241, 72, 72);
     color: white;
   }
@@ -186,10 +186,10 @@ label {
     z-index: 4;
     clear: both;
   }
-  #logo-black {
+  .logo-black {
     margin-left: 15px;
   }
-  #navtop {
+  .navtop {
     position: absolute;
     top: 0px;
     display: none;
@@ -199,14 +199,14 @@ label {
     margin-top: 66px;
     box-shadow: 0px 10px 20px #808080;
   }
-  #navtop li {
+  .navtop li {
     margin-left: 30px;
     line-height: 1.9;
   }
-  #navtop ul li a:hover {
+  .navtop ul li a:hover {
     color: rgb(241, 72, 72);
   }
-  #navtop ul li ul li::before {
+  .navtop ul li ul li::before {
     content: "- ";
     color: #808080;
   }
@@ -226,7 +226,7 @@ label {
     display: block;
     margin-right: 15px;
   }
-  .menu-link:checked ~ #navtop {
+  .menu-link:checked ~ .navtop {
     display: block;
   }
   .icon-menu:hover,
@@ -241,63 +241,21 @@ label {
 */
 .super-grid {
   display: grid;
-  /* grid-gap: 2rem; */
+  margin-top: 66px;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 38.79vw auto 39.88vw 50vw 50vw auto 35.8vw; 
   grid-template-areas:
-    "grid"
-    "grid2"
-    "grid3"
-    "grid4";
-}
-@media (min-width: 700px) {
-  .super-grid {
-    display: grid;
-    grid-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 50vw auto auto;
-    grid-template-areas:
-      "grid"
-      "grid2"
-      "grid3"
-      "grid4";
-  }
+    "cinema"
+    "why"
+    "video"
+    "container-for-boxes"
+    "who-we"
+    "about-us"
+    "blog";
 }
 @media (max-width: 767px) {
   .super-grid {
-    grid-template-rows: auto auto auto auto;
-  }
-}
-.grid {
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "cinema cinema"
-    "why why"
-    "video video"
-    "box1 box2";
-}
-@media (min-width: 1004px) {
-  .grid {
-    grid-template-rows: 38.79vw auto 39.88vw 50vw;
-  }
-}
-@media (max-width: 1003px) {
-  .grid {
-    grid-template-rows: 38.79vw auto 400px 50vw;
-  }
-}
-@media (max-width: 767px) {
-  .grid {
-    grid-template-rows: 500px auto 810px 500px 500px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "cinema"
-      "why"
-      "video"
-      "box1"
-      "box2";
+    grid-template-rows: 500px auto 810px 1000px auto auto 2000px;
   }
 }
 /*
@@ -305,7 +263,7 @@ label {
 * CINEMA
 ******************
 */
-#top-banner {
+.top-banner {
   grid-area: cinema;
   background: url(../comigo/other/homepage-featured-new-1920x745.jpg) no-repeat;
   background-size: cover;
@@ -313,11 +271,10 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 66px;
   padding: 0 10%;
 }
-#top-banner h1,
-#top-banner h3 {
+.top-banner h1,
+.top-banner h3 {
   text-align: center;
 }
 /*
@@ -325,19 +282,16 @@ label {
 * WHY
 ******************
 */
-#why {
+.why {
   grid-area: why;
   background: white;
   text-align: center;
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  padding: 10vw 0;
+  padding: 10vw 15px;
 }
-#why h2 {
+.why h2 {
   color: #696969;
 }
-#why h4 {
+.why h4 {
   color: #808080;
 }
 /*
@@ -345,7 +299,7 @@ label {
 * VIDEOS
 ******************
 */
-#videoplace {
+.videoplace {
   grid-area: video;
   position: relative;
   width: 100%;
@@ -356,7 +310,7 @@ label {
   left: 0;
   overflow: hidden;
 }
-#engage {
+.engage {
   display: block;
   top: 10%;
   left: 10%;
@@ -364,11 +318,11 @@ label {
   z-index: 3;
   font-size: 1.5rem;
 }
-#navideo {
+.navideo {
   display: flex;
   justify-content: center;
 }
-#navideo ul {
+.navideo ul {
   list-style: none;
   height: 100%;
   display: flex;
@@ -377,7 +331,7 @@ label {
   text-align: left;
   width: 100px;
 }
-#navideo a {
+.navideo a {
   line-height: 2.5;
 }
 .text-img-wrapper {
@@ -388,33 +342,33 @@ label {
   width: 25%;
   text-align: center;
 }
-#videoplace img {
+.videoplace img {
   margin-top: 15px;
   width: 90%;
 }
-#engage {
+.engage {
   position: absolute;
   width: 15%;
   top: 60px;
   left: 10%;
   z-index: 3;
 }
-#engage h5 {
+.engage h5 {
   text-transform: uppercase;
   line-height: 1.5;
 }
-#navideo {
+.navideo {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 3;
   text-transform: uppercase;
 }
-#navideo a {
+.navideo a {
   text-decoration: none;
   color: #808080;
 }
-#navideo a:hover {
+.navideo a:hover {
   color: rgb(241, 72, 72);
 }
 .videosection video {
@@ -444,40 +398,40 @@ label {
 .show {
   display: block;
 }
-#navideo li:not(.show) figure {
+.navideo li:not(.show) figure {
   display: none;
 }
-#navideo ul li:hover ~ .show figure {
+.navideo ul li:hover ~ .show figure {
   display: none;
 }
-#navideo ul li:hover figure {
+.navideo ul li:hover figure {
   display: block;
 }
 @media (max-width: 767px) {
   .video-wrapper video {
     display: none;
   }
-  #engage,
+  .engage,
   .text-img-wrapper {
     width: 100%;
     right: 0;
   }
-  #engage {
+  .engage {
     left: 0;
     padding-left: 15px;
   }
   .text-img-wrapper {
     top: 350px;
   }
-  #videoplace img {
+  .videoplace img {
     width: 40%;
   }
-  #navideo {
+  .navideo {
     top: 80px;
     height: 400px;
     justify-content: left;
   }
-  #navideo a {
+  .navideo a {
     margin-left: 15px;
   }
 }
@@ -486,24 +440,27 @@ label {
 * BOXES
 ******************
 */
-#box1 {
-  grid-area: box1;
+.container-for-boxes {
+  grid-area: container-for-boxes;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.box1 {
   background-image: url(../comigo/other/ic_EI_cloud_2_home_page.png),
     url(../comigo/other/home-tv-service-bg1.png);
   background-position: 35% 15%, 100% 100%;
   background-size: 50% auto, cover;
   background-repeat: no-repeat, no-repeat;
 }
-#box2 {
-  grid-area: box2;
+.box2 {
   background-image: url(../comigo/other/ic-stb-screens.png),
     url(../comigo/other/home-tv-service-bg2.png);
   background-position: 13% 15%, 100% 100%;
   background-size: 40% auto, cover;
   background-repeat: no-repeat, no-repeat;
 }
-#box1,
-#box2 {
+.box1,
+.box2 {
   display: grid;
   justify-items: start;
   align-content: end;
@@ -511,45 +468,51 @@ label {
   padding-left: 15%;
   grid-gap: 2rem;
 }
-#box2 h2 {
+.box2 h2 {
   color: #505050;
 }
-#box2 h5 {
+.box2 h5 {
   color: #808080;
 }
-#box1 button {
+.box1 button {
   background: white;
   color: rgb(241, 72, 72);
 }
-#box1 button,
-#box2 button {
+.box1 button,
+.box2 button {
   margin-top: 0;
+}
+@media (max-width: 767px) {
+  .container-for-boxes {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 500px;
+  }
 }
 /*
 ******************
 * WHO
 ******************
 */
-.grid2 {
+.who-we {
   display: grid;
-  grid-area: grid2;
+  grid-area: who-we;
   grid-template-rows: auto auto;
   grid-template-areas:
     "who-text"
     "who-img";
 }
 @media (max-width: 767px) {
-  #who {
+  .who {
     padding: 15px;
   }
-  #whotext,
-  #whoimg {
+  .whotext,
+  .whoimg {
     width: 100%;
     padding: 30px 0;
   }
 }
 @media (min-width: 767px) {
-  .grid2 {
+  .who-we {
     display: grid;
     grid-gap: 0px;
     grid-template-columns: 4fr 6fr;
@@ -557,7 +520,7 @@ label {
     grid-template-areas: "who-text who-img";
   }
 }
-#whotext {
+.whotext {
   grid-area: who-text;
   display: flex;
   flex-direction: column;
@@ -565,30 +528,29 @@ label {
   justify-content: center;
   background: white;
 }
-#whotext h2,
-#whotext h5 {
+.whotext h2,
+.whotext h5 {
   color: #505050;
   text-align: center;
 }
-#whoimg {
+.whoimg {
   grid-area: who-img;
   display: flex;
   align-items: center;
 }
-#whoimg img {
+.whoimg img {
   width: 98%;
   margin-left: 10%;
 }
-
 /*
 ******************
-* GRID3
+* about-us
 ******************
 */
-.grid3 {
+.about-us {
   display: grid;
   grid-gap: 0px;
-  grid-area: grid3;
+  grid-area: about-us;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
     "topleft"
@@ -598,10 +560,10 @@ label {
     "bottomright";
 }
 @media (min-width: 768px) {
-  .grid3 {
+  .about-us {
     display: grid;
     grid-gap: 0px;
-    grid-area: grid3;
+    grid-area: about-us;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 20vw 20vw;
     grid-template-areas:
@@ -612,21 +574,21 @@ label {
     transform: scale(1.02);
     box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
   }
-  #bottomright:hover {
+  .bottomright:hover {
     box-shadow: 0px -2px 24px 2px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
   }
 }
-#topleft {
+.topleft {
   grid-area: topleft;
   background: #f9f6fc;
   display: flex;
   flex-direction: column-reverse;
 }
-#topleft h2 {
+.topleft h2 {
   color: #505050;
 }
-#right {
+.right {
   grid-area: right;
   display: flex;
   flex-direction: column;
@@ -634,26 +596,26 @@ label {
   padding: 15px 0 0 15px;
   justify-content: space-between;
 }
-#right h2 {
+.right h2 {
   flex: 0 0 auto;
   color: #505050;
 }
-#right img {
+.right img {
   flex: 0 0 auto;
   align-self: flex-end;
   width: 100%;
 }
-#topright {
+.topright {
   grid-area: topright;
   display: grid;
   background: rgb(241, 72, 72);
   justify-items: center;
 }
-#topright span {
+.topright span {
   color: white;
   font-size: 12vw;
 }
-#bottomleft {
+.bottomleft {
   grid-area: bottomleft;
   display: grid;
   grid-column-gap: 1rem;
@@ -664,42 +626,42 @@ label {
   justify-content: center;
   background: #ebe8e8;
 }
-#bottomleft button {
+.bottomleft button {
   border-radius: 50%;
   padding: 2vw;
   color: white;
   margin-top: 0;
 }
-#bottomleft span {
+.bottomleft span {
   font-size: 2vw;
 }
-#bottomright {
+.bottomright {
   grid-area: bottomright;
   background-color: #d3d3d3;
   position: relative;
 }
-#bottomright img {
+.bottomright img {
   width: 100%;
 }
-#bottomright h6 {
+.bottomright h6 {
   color: #808080;
 }
 @media (max-width: 767px) {
-  #topleft h2,
-  #right h2 {
+  .topleft h2,
+  .right h2 {
     font-size: 3.5rem;
   }
-  #topright span {
+  .topright span {
     font-size: 10rem;
   }
-  #topright h6 {
+  .topright h6 {
     font-size: 2rem;
     margin-top: 15px;
   }
-  #bottomleft span {
+  .bottomleft span {
     font-size: 2.5rem;
   }
-  #bottomleft button {
+  .bottomleft button {
     padding: 1.5rem;
   }
 }
@@ -708,50 +670,45 @@ label {
 * BLOG
 ******************
 */
-.grid4 {
-  display: grid;
-  grid-gap: 0px;
-  grid-area: grid4;
-  grid-template-rows: 2000px 500px auto;
-  grid-template-areas:
-    "blog"
-    "footer-start"
-    "footer-end";
+.blog {
+  grid-area: blog;
+  display: flex;
+  align-items: stretch;
 }
-#our-blog {
+.our-blog {
   flex: 1 1 16.6%;
   display: flex;
   flex-direction: column-reverse;
   background: rgb(241, 72, 72);
   padding: 15px;
 }
-#our-blog h1 {
+.our-blog h1 {
   order: 1;
   flex: 0 0 auto;
 }
-#our-blog h4 {
+.our-blog h4 {
   flex: 0 0 auto;
 }
-#one {
+.one {
   background: url(../comigo/blog/one.png) no-repeat;
 }
-#two {
+.two {
   background: url(../comigo/blog/two.jpeg) no-repeat;
 }
-#three {
+.three {
   background: url(../comigo/blog/three.jpg) no-repeat;
 }
-#four {
+.four {
   background: url(../comigo/blog/four.jpeg) no-repeat;
 }
-#five {
+.five {
   background: url(../comigo/blog/five.jpeg) no-repeat;
 }
-#one,
-#two,
-#three,
-#four,
-#five {
+.one,
+.two,
+.three,
+.four,
+.five {
   flex: 1 1 16.6%;
   background-position: center;
   display: flex;
@@ -796,53 +753,37 @@ label {
   bottom: 0;
   left: 6%;
 }
-#blog-line {
-  grid-area: blog;
-  display: flex;
-  align-items: stretch;
-}
 @media (min-width: 768px) {
-  .grid4 {
-    display: grid;
-    grid-gap: 0px;
-    grid-area: grid4;
-    grid-template-columns: 1fr;
-    grid-template-rows: 35.8vw 250px 50px;
-    grid-template-areas:
-      "blog"
-      "footer-start"
-      "footer-end";
-  }
   .hidden {
     transform: translateY(70px);
   }
-  #one:hover,
-  #two:hover,
-  #three:hover,
-  #four:hover,
-  #five:hover {
+  .one:hover,
+  .two:hover,
+  .three:hover,
+  .four:hover,
+  .five:hover {
     z-index: 2;
     box-shadow: 0px -70px 40px 2px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
   }
-  #one:hover .blog-section-main,
-  #two:hover .blog-section-main,
-  #three:hover .blog-section-main,
-  #four:hover .blog-section-main,
-  #five:hover .blog-section-main {
+  .one:hover .blog-section-main,
+  .two:hover .blog-section-main,
+  .three:hover .blog-section-main,
+  .four:hover .blog-section-main,
+  .five:hover .blog-section-main {
     box-shadow: inset rgba(0, 0, 0, 0.6) 170px 100px 40px 10px,
       rgba(0, 0, 0, 0.6) 0 0px 24px 20px;
   }
-  #one:hover .hidden,
-  #two:hover .hidden,
-  #three:hover .hidden,
-  #four:hover .hidden,
-  #five:hover .hidden {
+  .one:hover .hidden,
+  .two:hover .hidden,
+  .three:hover .hidden,
+  .four:hover .hidden,
+  .five:hover .hidden {
     transform: translateY(0px);
   }
 }
 @media (max-width: 767px) {
-  #blog-line {
+  .blog {
     flex-direction: column;
   }
 }
@@ -851,23 +792,25 @@ label {
 * FOOTER START
 ******************
 */
-#footer-start {
+.footer-start {
   display: flex;
   grid-area: footer-start;
   background: #292929;
   justify-content: space-around;
   padding-top: 40px;
+  height: 250px;
 }
-#menuone,
-#menutwo,
-#menuthree {
+.menuone,
+.menutwo,
+.menuthree {
   flex: 0 0 auto;
 }
-#menuone h5,
-#menutwo h5,
-#menuthree h5,
-#logowhite {
+.menuone > li,
+.menutwo > li,
+.menuthree > li,
+.logowhite {
   padding-top: 20px;
+  list-style-type: none;
 }
 .bottomsmall {
   width: 100%;
@@ -883,11 +826,12 @@ label {
   color: rgb(241, 72, 72);
 }
 @media (max-width: 767px) {
-  #footer-start {
+  .footer-start {
     flex-direction: column;
     padding-left: 15px;
+    height: 500px;
   }
-  #logowhite {
+  .logowhite {
     align-self: center;
     padding-bottom: 2rem;
   }
@@ -897,7 +841,7 @@ label {
 * FOOTER END
 ******************
 */
-#footer-end{
+.footer-end {
   display: flex;
   justify-content: normal;
   align-items: center;
@@ -905,6 +849,7 @@ label {
   background: #191919;
   font-size: 0.9vw;
   color: #808080;
+  height: 50px;
 }
 .rights {
   flex: 0 0 25%;
@@ -913,26 +858,27 @@ label {
   color: #808080;
   font-size: 0.55rem;
 }
-#nav-footer-end {
+.nav-footer-end {
   flex: 0 0 50%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
-#nav-footer-end li {
+.nav-footer-end li {
   flex: 0 0 auto;
   margin: 0.2rem;
   color: #808080;
   font-size: 1rem;
 }
-#nav-footer-end li::before {
+.nav-footer-end li::before {
   content: " | ";
   margin: 0 10px;
 }
-#nav-footer-end a {
+.nav-footer-end a {
   text-decoration: none;
   color: #808080;
 }
-#nav-footer-end a:hover {
+.nav-footer-end a:hover {
   color: white;
   cursor: pointer;
 }
@@ -941,7 +887,7 @@ label {
   display: flex;
   justify-content: flex-end;
 }
-.soshial-icon a{
+.soshial-icon a {
   margin-right: 5px;
 }
 .soshial-icon li {
@@ -966,17 +912,19 @@ label {
   transform: none;
 }
 @media (min-width: 768px) {
-  #footer-end{
+  .footer-end {
     padding: 0 15px;
   }
 }
 @media (max-width: 767px) {
-  #footer-end{
+  .footer-end {
     flex-direction: column;
     font-size: 0.8rem;
+    height: auto;
   }
-  #nav-footer-end,
+  .nav-footer-end,
   .soshial-icon {
     padding-top: 15px;
+    justify-content: center;
   }
 }
