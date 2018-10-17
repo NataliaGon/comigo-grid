@@ -711,7 +711,7 @@ label {
   display: flex;
   flex-direction: column-reverse;
   transition-property: all;
-  transition-duration: 0.9s;
+  transition-duration: 0.2s;
   transition-timing-function: linear;
   transition-delay: initial;
   box-shadow: 0px 0px 300px 50px black inset;
@@ -722,7 +722,7 @@ label {
 .blog-section-main {
   flex: 0 0 auto;
   align-self: center;
-  padding: 0 15px;
+  padding: 10px 15px;
 }
 .hidden-read {
   width: 100%;
