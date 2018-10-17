@@ -163,10 +163,7 @@ label {
     transform: scale(1, 1);
   }
   nav ul ul li {
-    flex-basis: 33.33%;
-  }
-  .navtop ul ul ul li {
-    flex-basis: 50%;
+    flex: 1 1 auto;
   }
   .navtop ul li ul li a:hover {
     background: rgb(241, 72, 72);
