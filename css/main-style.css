@@ -445,14 +445,14 @@ label {
 .box1 {
   background-image: url(../comigo/other/ic_EI_cloud_2_home_page.png),
     url(../comigo/other/home-tv-service-bg1.png);
-  background-position: 35% 15%, 100% 100%;
+  background-position: 35% 15%;
   background-size: 50% auto, cover;
   background-repeat: no-repeat, no-repeat;
 }
 .box2 {
   background-image: url(../comigo/other/ic-stb-screens.png),
     url(../comigo/other/home-tv-service-bg2.png);
-  background-position: 13% 15%, 100% 100%;
+  background-position: 13% 15%;
   background-size: 40% auto, cover;
   background-repeat: no-repeat, no-repeat;
 }
