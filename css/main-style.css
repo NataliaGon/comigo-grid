@@ -64,6 +64,7 @@ button {
   transition-delay: initial;
   cursor: pointer;
   margin-top: 30px;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   button:hover {
@@ -96,6 +97,10 @@ body {
 .menu-link,
 label {
   display: none;
+}
+.second-line-nav,
+.third-line-nav{
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   header {
@@ -247,8 +252,13 @@ label {
     "video"
     "container-for-boxes"
     "who-we"
-    "about-us"
+    "mosaic"
     "blog";
+}
+@media (max-width: 1003px) {
+  .super-grid {
+    grid-template-rows: 500px auto 400px 1000px auto auto 2000px;
+  }
 }
 @media (max-width: 767px) {
   .super-grid {
@@ -287,6 +297,7 @@ label {
 }
 .why h2 {
   color: #696969;
+  text-transform: uppercase
 }
 .why h4 {
   color: #808080;
@@ -465,6 +476,9 @@ label {
   padding-left: 15%;
   grid-gap: 2rem;
 }
+.boxtext{
+  text-transform: uppercase;
+}
 .box2 h2 {
   color: #505050;
 }
@@ -525,6 +539,9 @@ label {
   justify-content: center;
   background: white;
 }
+.whotext h2{
+  text-transform: uppercase;
+}
 .whotext h2,
 .whotext h5 {
   color: #505050;
@@ -534,6 +551,7 @@ label {
   grid-area: who-img;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 }
 .whoimg img {
   width: 98%;
@@ -541,13 +559,13 @@ label {
 }
 /*
 ******************
-* about-us
+* mosaic
 ******************
 */
-.about-us {
+.mosaic {
   display: grid;
   grid-gap: 0px;
-  grid-area: about-us;
+  grid-area: mosaic;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
     "topleft"
@@ -557,11 +575,11 @@ label {
     "bottomright";
 }
 @media (min-width: 768px) {
-  .about-us {
+  .mosaic {
     display: grid;
     grid-gap: 0px;
-    grid-area: about-us;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-area: mosaic;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;;
     grid-template-rows: 20vw 20vw;
     grid-template-areas:
       "topleft topleft topright right right"
@@ -628,8 +646,6 @@ label {
   padding: 2vw;
   color: white;
   margin-top: 0;
-}
-.bottomleft span {
   font-size: 2vw;
 }
 .bottomright {
@@ -643,6 +659,9 @@ label {
 .bottomright h6 {
   color: #808080;
 }
+.bottomright, .right, .topleft{
+  text-transform: uppercase;
+}
 @media (max-width: 767px) {
   .topleft h2,
   .right h2 {
@@ -655,11 +674,9 @@ label {
     font-size: 2rem;
     margin-top: 15px;
   }
-  .bottomleft span {
-    font-size: 2.5rem;
-  }
   .bottomleft button {
     padding: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 /*
@@ -678,6 +695,7 @@ label {
   flex-direction: column-reverse;
   background: rgb(241, 72, 72);
   padding: 15px;
+  text-transform: uppercase;
 }
 .our-blog h1 {
   order: 1;
@@ -729,6 +747,7 @@ label {
   background: rgb(241, 72, 72);
   text-align: center;
   line-height: 70px;
+  text-transform: uppercase;
 }
 .hidden-read a {
   flex: 0 0 auto;
@@ -838,6 +857,9 @@ label {
 * FOOTER END
 ******************
 */
+footer{
+  text-transform: uppercase;
+}
 .footer-end {
   display: flex;
   justify-content: normal;
