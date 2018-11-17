@@ -651,7 +651,9 @@ label {
 .bottomright {
   grid-area: bottomright;
   background-color: #d3d3d3;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .bottomright img {
   width: 100%;
