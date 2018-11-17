@@ -245,7 +245,7 @@ label {
   display: grid;
   margin-top: 66px;
   grid-template-columns: 1fr;
-  grid-template-rows: 38.79vw auto 39.88vw 50vw 50vw auto 35.8vw; 
+  grid-template-rows: 38.79vw auto 39.88vw 50vw 50vw  auto 35.8vw; 
   grid-template-areas:
     "cinema"
     "why"
@@ -253,11 +253,11 @@ label {
     "container-for-boxes"
     "who-we"
     "mosaic"
-    "blog";
+    "blog"
 }
 @media (max-width: 1003px) {
   .super-grid {
-    grid-template-rows: 500px auto 400px 1000px auto auto 2000px;
+    grid-template-rows: 500px auto 400px 50vw 50vw  auto 35.8vw;
   }
 }
 @media (max-width: 767px) {
